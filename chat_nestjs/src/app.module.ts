@@ -5,6 +5,7 @@ import { ConfigModule } from '@nestjs/config';
 import { MysqlModule } from './database/mysql/mysql.module';
 import { MongoDbModule } from './database/mongo/mongo-db.module';
 import { UserModule } from './user/user.module';
+import { ChatGateway } from './chat/chat.gateway';
 
 @Module({
   imports: [
@@ -17,6 +18,6 @@ import { UserModule } from './user/user.module';
     UserModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, ChatGateway],
 })
 export class AppModule {}
