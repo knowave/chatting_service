@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { MysqlModule } from './database/mysql/mysql.module';
 import { MongoDbModule } from './database/mongo/mongo-db.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { MongoDbModule } from './database/mongo/mongo-db.module';
     }),
     MysqlModule,
     MongoDbModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
