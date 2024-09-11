@@ -9,6 +9,9 @@ export class Chat {
   roomId: string;
 
   @Prop({ required: true })
+  messageId: string;
+
+  @Prop({ required: true })
   userId: number;
 
   @Prop({ required: true })
