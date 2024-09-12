@@ -1,4 +1,4 @@
-import { Prop, Schema } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
 
 export type chatDocument = HydratedDocument<Chat>;
@@ -23,3 +23,5 @@ export class Chat {
   @Prop({ default: Date.now })
   createdAt: Date;
 }
+
+export const ChatSchema = SchemaFactory.createForClass(Chat);
